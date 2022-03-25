@@ -5,19 +5,21 @@
         <link rel='stylesheet' href="css/calculator.css">
     </head>
     <body>
-        <h1 text-align="center">Calculator</h1>
+        <h1 style = text-align:center;color:grey;>Calculator</h1>
         <table class = "calculator" >
             <tr>
-                <td colspan = "3"> <input class = "display-box" type = "text" id = "result"  /> </td>
+                <td colspan = "4"> <input class = "display-box" type = "text" id = "result" onkeyup="notString()"  /> </td>
+                
                 <!-- clearScreen() function clear all the values -->
                 <td> <input class = "button" type = "button" value = "C" onclick = "clearScreen()" style = "background-color: #fb0066;" /> </td>
-                </tr>
                 <tr>
                 <!-- display() function display the value of clicked button -->
                 <td> <input class = "button" type = "button" value = "1" onclick = "display(1)" /> </td>
                 <td> <input class = "button" type = "button" value = "2" onclick = "display(2)" /> </td>
                 <td> <input class = "button" type = "button" value = "3" onclick = "display(3)" /> </td>
-                <td> <input class = "button" type = "button" value = "/" onclick = "divide('/')" /> </td>
+                <td> <input class = "button" type = "button" value = "/" onclick = "display('/')" /> </td>
+                <!-- Delete Last value -->
+                <td> <input class = "button" type = "button" value = "←" onclick = "clearScreen()" style = "background-color: #fb0066;" /> </td>
                 </tr>
                 <tr>
                 <td> <input class = "button" type = "button" value = "4" onclick = "display(4)" /> </td>
